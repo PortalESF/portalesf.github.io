@@ -391,7 +391,7 @@ figcaption {
 		width: 100%;
 	}
 	.faq-logo {
-		width: 60%;
+		width: 70%;
 	}
 }
 
@@ -399,11 +399,11 @@ figcaption {
 @media (max-width: 991.98px) {
 
 	.duvida{
-    	width: 90%; 
+    	width: 100%; 
 	}
 	
 	.resposta{
-    	width: 80%; 
+    	width: 90%; 
 	}
 	.img-section {
 		float: center;
@@ -418,7 +418,7 @@ figcaption {
 		padding-bottom: 0vh;
 	}
 	.faq-logo {
-		width: 50%;
+		width: 70%;
 	}
 }
 
