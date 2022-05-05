@@ -425,6 +425,9 @@ figcaption {
 		padding-top: 2vh;
 		padding-bottom: 0vh;
 	}
+	.faq-img {
+		width: 100%;
+	}
 	.faq-logo {
 		width: 50%;
 	}
