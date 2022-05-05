@@ -358,14 +358,18 @@ figcaption {
 		width: 100%;
 	}
 	.faq-logo {
-		width: 90%;
+		width: 100%;
+	}
+	.faq-padding {
+		padding-top: 3vh;
+		padding-bottom: 0vh;
 	}
 	.titulo {
 		font-size: 4.5vh;
 	}
 }
 
-/* Small devices (landscape phones, 576px and up) */
+/* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 767.98px) {
 
 	.duvida{
@@ -373,7 +377,7 @@ figcaption {
 	}
 	
 	.resposta{
-    	width: 90%; 
+    	width: 00%; 
 	}
 	.img-section {
 		float: center;
@@ -391,19 +395,23 @@ figcaption {
 		width: 100%;
 	}
 	.faq-logo {
-		width: 70%;
+		width: 60%;
+	}
+	.faq-padding {
+		padding-top: 3vh;
+		padding-bottom: 0vh;
 	}
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Small devices (landscape phones, less than 768px) */
 @media (max-width: 991.98px) {
 
 	.duvida{
-    	width: 100%; 
+    	width: 90%; 
 	}
 	
 	.resposta{
-    	width: 90%; 
+    	width: 80%; 
 	}
 	.img-section {
 		float: center;
@@ -418,21 +426,24 @@ figcaption {
 		padding-bottom: 0vh;
 	}
 	.faq-logo {
-		width: 70%;
+		width: 50%;
 	}
 }
 
-/* Large devices (desktops, 992px and up) */
+/* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
 
 	.faq-logo {
-		width: 50%;
+		width: 80%;
+	}
+	.faq-padding {
+		padding-top: 3vh;
+		padding-bottom: 0vh;
 	}
 	
 }
 
-/* X-Large devices (large desktops, 1200px and up) */
+/* X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {
 	
 }
-
