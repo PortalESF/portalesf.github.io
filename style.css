@@ -1,0 +1,434 @@
+/*              
+// .-. .    .    
+// `-.-|-. .| .-,
+// `-' '-'-|'-`'-
+//       `-'     
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap'); /* Font Import */
+
+:root {
+
+  /* Font Size */
+  --fg-primary: 12vh; /* Time and Greetings */
+  --fg-secondary: 3vh; /* Greetings and Weather widger */
+  --fg-date: 8vh; /* Date */
+  --fg-list: 2vh; /* Links List */
+  --icon: 3vh; /* Icon Size */
+
+  /* Fonts Color */
+  --fg: #3a3a3a; /* Foreground color */
+  --sfg: #494949; /* Sceondary Foreground color */
+
+  /* Light Colors  */
+  --accent: #28c48b; /* Hover color */
+  --background: #ffffff; /* Background color */
+  --card: #e4e6e6; /* Cards color */
+  --line: #999; /* Line color in card */
+  
+}
+
+.darktheme {
+
+  /* Dark Colors  */
+  --accent: #28c48b; /* Hover color */
+  --background: #1B2421; /* Background color */
+  --card: #27332f; /* Cards color */
+  --line: #33433d; /* Line color in card */
+
+  /* Fonts Color */
+  --fg: #d8dee9; /* Foreground color */
+  --sfg: #2c292e; /* Secondary Foreground color */
+
+}
+
+/* Lógica que permite trocar a imagem baseado na cor do tema */
+body.darktheme img.light {
+	display:inline-block;
+}
+
+body.darktheme img.dark {
+	display:none;
+}
+
+img.light {
+	display:none;
+}
+/* termino lógica */
+
+* {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	transition: 0.2s ease-in-out;
+}
+
+.grid { /*card*/
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(auto-fill, minmax(275px,1fr));
+	grid-auto-rows: 20px;
+}
+
+.card {
+	background: var(--card);
+	border-radius: 12px;
+	font-size: 1.8vh;
+	color: var(--fg);
+	padding-left: 3vh;
+	padding-right: 3vh;
+	font-weight: bold;
+	text-align: center;
+	margin: 0vh;
+	box-shadow: 0 5px 7px rgba(0, 0, 0, 0.35);
+  	width: 100%;	
+	display: inline-block;
+}
+
+.card:hover {
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.35);
+	transform: translateY(-0.1rem);
+}
+
+
+/* Non-grid specific CSS */  
+body {
+
+	margin: 10px;
+	color: var(--fg);
+	background-color: var(--background);
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	max-width: 75vw;
+	margin: 0px auto 20px auto;
+}
+
+section::before, section::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+
+a {
+	text-decoration: none;
+	color: var(--fg);
+}
+
+a:link, a:visited {
+	width: 100%;
+	border-radius: 6px;
+	padding: 9px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover, a:active {
+	background-color: var(--accent);
+	color: var(--background);
+}
+
+#themeButton {
+  position: absolute;
+  margin: 2em 2em 0 0;
+  right: 0;
+  top: 0;
+  color: var(--fg);
+  border: none;
+  cursor: pointer;
+  background-color: #00000000;
+}
+
+#themeIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.text-section {
+	font-size: 2.5vh;
+	width: 50%;
+	float: left;
+}
+.text-section h1 {
+	font-size: 4.5vh;
+	font-weight: bold;
+}
+
+.top-padding {
+	padding-top: 8vh;
+	padding-bottom: 5vh;
+}
+
+.img-section {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+.blog {
+
+}
+
+.item {
+
+}
+
+.lista{ /* lista */
+
+	display: grid;
+ 	grid-gap: 0.3em;
+	list-style-type: none;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-bottom: 1.5vh;
+
+}
+
+
+hr.linha {
+	border: 2px solid var(--line);
+	width: 100%;
+	margin-bottom: 1.5vh;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+
+
+/* For FAQ page*/
+
+figcaption {
+    font-style: italic;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.faq {
+
+	text-align: center;
+}
+.faq-logo {
+	width: 30%; 
+	float: center;
+	text-align: center;
+}
+
+.faq-img { 					/* Deixa a imagem com a borda arredondada e adiciona espaço entre o texto e a imagem*/
+	border-radius: 16px;
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	max-width: 100%;
+	width: 80%;    		/* Faz a imagem ocupar a largura do campo Resposta inteiro - priorizar imagens na horizontal*/
+}
+
+.titulo {
+	text-align: center;
+	font-size: 5vh;
+	text-decoration: bold;
+}
+
+
+/* Style the buttons that are used to open and close the faq-page body */
+.duvida {
+	background-color: var(--background);
+	border-radius: 6px;
+    color: var(--fg);
+    cursor: pointer;
+    padding: 20px 3vh;
+    width: 65%;
+    text-align: left;
+    border: none;
+	border-bottom: 3px dotted var(--accent);
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+    font-size: 2.5vh;
+	font-weight: bold;
+	transition: 0.4s;
+	margin-top: 1vh;
+}
+
+.resposta{
+    margin: auto;
+    /* text-align: center; */
+    width: 50%; 
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .duvida:hover {
+	background-color: var(--accent);
+	color: var(--background);
+}
+
+/* Style the faq-page panel. Note: hidden by default */
+.resposta {
+	text-align: left;
+    display: none;
+    overflow: hidden;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 0vh;	
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  }
+
+.duvida:after {
+    content: '\002B';
+    /* Unicode character for "plus" sign (+) */
+	color: var(--fg);
+    font-size: 2.5vh;
+    float: right;
+    margin-left: 5px;
+    position: sticky;
+}
+
+.active:after {
+    content: "\2212";
+	color: var(--background);
+    /* Unicode character for "minus" sign (-) */
+}
+
+/* Pra inserir videos do Youtube e ter altura automatica. */
+.iframe-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+.iframe-embed-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.iframe-embed-responsive-16by9 {
+    padding-bottom: 56.25%;
+}
+
+/* --- CSS Breakpoints --- */
+/* Muda as regras acima de acordo com tamanho da tela estipulado. Deixa o site mobile friendly https://getbootstrap.com/docs/5.0/layout/breakpoints/ */
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+	.duvida{
+    	width: 90%; 
+	}
+	
+	.resposta{
+    	width: 80%; 
+	}
+	.img-section {
+		float: center;
+		width: 100%;
+	}	
+	.text-section {
+		width: 100%;
+		float: center;
+	}
+	.top-padding {
+		padding-top: 2vh;
+		padding-bottom: 0vh;
+	}
+	.faq-img {
+		width: 100%;
+	}
+	.faq-logo {
+		width: 80%;
+	}
+	.titulo {
+		font-size: 4vh;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+
+	.duvida{
+    	width: 90%; 
+	}
+	
+	.resposta{
+    	width: 80%; 
+	}
+	.img-section {
+		float: center;
+		width: 100%;
+	}	
+	.text-section {
+		width: 100%;
+		float: center;
+	}
+	.top-padding {
+		padding-top: 2vh;
+		padding-bottom: 0vh;
+	}
+	.faq-img {
+		width: 100%;
+	}
+	.faq-logo {
+		width: 60%;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {
+
+	.duvida{
+    	width: 90%; 
+	}
+	
+	.resposta{
+    	width: 80%; 
+	}
+	.img-section {
+		float: center;
+		width: 100%;
+	}	
+	.text-section {
+		width: 100%;
+		float: center;
+	}
+	.top-padding {
+		padding-top: 2vh;
+		padding-bottom: 0vh;
+	}
+	.faq-logo {
+		width: 50%;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1199.98px) {
+
+	.faq-logo {
+		width: 50%;
+	}
+	
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1399.98px) {
+	
+}
+
