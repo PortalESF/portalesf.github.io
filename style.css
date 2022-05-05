@@ -336,11 +336,11 @@ figcaption {
 @media (max-width: 575.98px) {
 
 	.duvida{
-    	width: 90%; 
+    	width: 100%; 
 	}
 	
 	.resposta{
-    	width: 80%; 
+    	width: 90%; 
 	}
 	.img-section {
 		float: center;
@@ -358,10 +358,10 @@ figcaption {
 		width: 100%;
 	}
 	.faq-logo {
-		width: 80%;
+		width: 90%;
 	}
 	.titulo {
-		font-size: 4vh;
+		font-size: 4.5vh;
 	}
 }
 
@@ -369,11 +369,11 @@ figcaption {
 @media (max-width: 767.98px) {
 
 	.duvida{
-    	width: 90%; 
+    	width: 100%; 
 	}
 	
 	.resposta{
-    	width: 80%; 
+    	width: 90%; 
 	}
 	.img-section {
 		float: center;
