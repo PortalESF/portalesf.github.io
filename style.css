@@ -119,13 +119,14 @@ section::before, section::after {
 	clear: both;
 }
 
+/* Dá cor e formato aos botoes usados dentro das cards e dentro das Dúvidas*/
 
-a {
+.button {
 	text-decoration: none;
 	color: var(--fg);
 }
 
-a:link, a:visited {
+.button:link, .button:visited {
 	width: 100%;
 	border-radius: 6px;
 	padding: 9px 0px;
@@ -134,10 +135,13 @@ a:link, a:visited {
 	display: inline-block;
 }
 
-a:hover, a:active {
+.button:hover, .button:active {
 	background-color: var(--accent);
 	color: var(--background);
 }
+
+/* fim do bloco */
+
 
 #themeButton {
   position: absolute;
@@ -183,6 +187,7 @@ a:hover, a:active {
 .item {
 
 }
+
 
 .lista{ /* lista */
 
