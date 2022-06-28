@@ -121,7 +121,9 @@ section::before, section::after {
 	clear: both;
 }
 
-a:link {
+
+/* Dá cor aos links */
+.link:link {
 	color: var(--link);
 }
 
