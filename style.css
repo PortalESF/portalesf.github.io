@@ -25,6 +25,7 @@
   --background: #ffffff; /* Background color */
   --card: #e4e6e6; /* Cards color */
   --line: #999; /* Line color in card */
+  --link: #4169E1; /* Link color on pages */
   
 }
 
@@ -35,6 +36,7 @@
   --background: #1B2421; /* Background color */
   --card: #27332f; /* Cards color */
   --line: #33433d; /* Line color in card */
+  --link: #4169E1; /* Link color on pages */
 
   /* Fonts Color */
   --fg: #d8dee9; /* Foreground color */
@@ -117,6 +119,10 @@ section::before, section::after {
 	content: '';
 	display: table;
 	clear: both;
+}
+
+a:link {
+	color: var(--link);
 }
 
 /* Dá cor e formato aos botoes usados dentro das cards e dentro das Dúvidas*/
