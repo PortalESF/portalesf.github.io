@@ -1,0 +1,89 @@
+
+.faq-logo {
+	  width: 30%;
+	  float: center;
+	  text-align: center;
+}
+
+.faq-img { 					/* Deixa a imagem com a borda arredondada e adiciona espaço entre o texto e a imagem */
+	  border-radius: 6px;
+	  margin-top: 1.5vh;
+	  margin-bottom: 1.5vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+	  width: 100%;    		/* Faz a imagem ocupar a largura do campo Resposta inteiro - priorizar imagens na horizontal */
+}
+
+.doacao {
+  margin-top: 6vh;
+}
+
+
+/* --- CSS Breakpoints --- */
+/* Muda as regras acima de acordo com tamanho da tela estipulado. Deixa o site mobile friendly https://getbootstrap.com/docs/5.0/layout/breakpoints/ */
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+  figure {
+    width: 100%;
+  }
+	.faq-img {
+		  width: 100%;
+	}
+	.faq-logo {
+	  	width: 100%;
+	}
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 767.98px) {
+
+  figure {
+    width: 100%;
+  }
+
+	.faq-img {
+		  width: 100%;
+	}
+	.faq-logo {
+	  	width: 70%;
+	}
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 991.98px) {
+  figure {
+    width: 100%;
+  }
+
+	.faq-img {
+		  width: 100%;
+	}
+	.faq-logo {
+		  width: 70%;
+	}
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  figure {
+    width: 100%;
+  }
+	.faq-logo {
+		  width: 70%;
+	}
+	.faq-padding {
+		  padding-top: 3vh;
+		  padding-bottom: 0vh;
+	}
+
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+}
